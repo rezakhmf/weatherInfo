@@ -15,7 +15,7 @@ class WeatherInfoAdapter(private var items: ArrayList<WeatherModel> = arrayListO
 
     override fun onBindViewHolder(holder: WeatherInfoHolder, position: Int) {
         holder.onBind(items[position])
-        //holder.dataBinding.executePendingBindings()
+        holder.dataBinding.executePendingBindings()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherInfoHolder {

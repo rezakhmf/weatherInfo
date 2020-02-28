@@ -13,15 +13,28 @@ class WeatherInfoViewModel @Inject constructor(private val getWeather: WeatherPr
 
     val cityName = MutableLiveData<String>()
 
+    // Create a LiveData with a String
+//    val cityName: MutableLiveData<String> by lazy {
+//        MutableLiveData<String>()
+//    }
+
+//    val cityName: LiveData<String> = liveData {
+//        emit(this.latestValue.toString())
+//    }
+
+
+
      val weatherInfo: LiveData<WeatherModel?> = liveData {
-        cityName.let { cityName ->
-            val data = getWeather.getWeatherBy(cityName = cityName.value.toString())
+        cityName.value?.let {
+            Log.d("", it)
+            val data = getWeather.getWeatherBy(cityName = it)
             emit(data)
             Log.d(TAG, data.toString())
         }
     }
 
     init {
+       // cityName.value = ""
 //        viewModelScope.launch {
 //            fun getWeatherInfo(): LiveData<WeatherModel?> {
 //                return weatherInfo

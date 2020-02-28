@@ -1,6 +1,7 @@
 package com.example.gumtree.view.weatherInfo
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_search_result_rv.*
 import javax.inject.Inject
 
+
 class WeatherInfoFragment: DaggerFragment() {
 
     private val TAG: String = WeatherInfoFragment::class.java.simpleName
@@ -26,16 +28,33 @@ class WeatherInfoFragment: DaggerFragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-    private val viewModel: WeatherInfoViewModel by viewModels { viewModelFactory }
+    val viewModel: WeatherInfoViewModel by viewModels { viewModelFactory }
 
     val adapter: WeatherInfoAdapter by lazy { WeatherInfoAdapter(arrayListOf())}
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+//
+//        viewModel.cityName.observe(viewLifecycleOwner, Observer {
+//            Log.d("", it)
+//        })
+
+
         return inflater.inflate(R.layout.fragment_search_result_rv, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+       // val mm = viewModel.cityName.value
+
+        with(viewModel) {
+            cityName.observe(viewLifecycleOwner, Observer {
+                print(it)
+            })
+        }
+
+        viewModel.cityName.value = arguments?.getString("city_name", "")
+
         with(viewModel) {
             weatherInfo.observe(viewLifecycleOwner, Observer {
                 initView(it)

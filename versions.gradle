@@ -19,6 +19,7 @@ versions.multidex = "2.0.1"
 versions.dagger = "2.26"
 
 versions.retrofit = "2.7.1"
+versions.retrofit_converter_gson = "2.7.1"
 versions.retrofit_coroutines = "0.9.2"
 versions.logging_interceptor = "3.12.1"
 
@@ -75,7 +76,7 @@ deps.dagger = dagger
 def retrofit = [:]
 retrofit.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
 retrofit.coroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$versions.retrofit_coroutines"
-retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.gsonConverter = "com.squareup.retrofit2:converter-gson:$versions.retrofit_converter_gson"
 
 deps.retrofit = retrofit
 

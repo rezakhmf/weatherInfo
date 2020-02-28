@@ -17,7 +17,7 @@ class WeatherModule {
     fun provideWeatherEndpoints(retrofit: Retrofit) : WeatherApiService {
         return retrofit.create(WeatherApiService::class.java)
     }
-    
+
     @Provides
     @Singleton
     fun provideWeatherPresenter(weatherRepository: WeatherRepository): BaseWeatherPresenter {

@@ -7,6 +7,6 @@ import javax.inject.Inject
 class WeatherRepository @Inject constructor(private val weatherApiService: WeatherApiService): BaseWeatherRepository {
 
     override suspend fun getWeatherByCity(cityName: String): WeatherModel? {
-        return weatherApiService.getWeatherByCity(cityName = cityName).await()
+        return weatherApiService.getWeatherByCity(cityName = cityName)
     }
 }

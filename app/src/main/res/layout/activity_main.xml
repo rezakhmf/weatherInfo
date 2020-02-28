@@ -52,10 +52,11 @@
 
     <FrameLayout
         android:id="@+id/frameLayout_result_container"
-        app:layout_constraintTop_toBottomOf="@id/guid_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonWeatherSearch"
         app:layout_constraintLeft_toRightOf="@id/guid_line_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="64dp"/>
 
 
 

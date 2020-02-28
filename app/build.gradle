@@ -61,8 +61,9 @@ dependencies {
     // retrofit
     implementation deps.retrofit.retrofit
     implementation deps.retrofit.coroutines
+    implementation deps.retrofit.gsonConverter
 
-    implementation deps.retrofit.gson
+    // okHttp
     implementation deps.okhttp.okhttp
     implementation deps.okhttp.interceptor
 
