@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Gumtree</string>
+    <string name="city_country_code">city, country code</string>
+    <string name="todo">TODO</string>
+    <string name="weather_description">weather description</string>
+    <string name="empty_list">no weather found</string>
+</resources>

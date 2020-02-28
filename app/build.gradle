@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion build_versions.compileSdkVersion
+    buildToolsVersion build_versions.buildToolsVersion
+    defaultConfig {
+        applicationId build_versions.applicationId
+        minSdkVersion build_versions.minSdkVersion
+        targetSdkVersion build_versions.target_sdk
+        versionCode build_versions.version_code
+        versionName build_versions.version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/layouts', 'src/main/res/layouts/parent'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // kotlin
+    implementation langs.kotlin_version
+
+    // android
+    implementation deps.androidx.appcompact
+    implementation deps.androidx.corektx
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.cardview
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.lifecycle_viewmodel_ktx
+    implementation deps.androidx.lifecycle_livedata_ktx
+    implementation deps.androidx.fragment_ktx
+    implementation deps.androidx.multidex
+
+    // retrofit
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.coroutines
+
+    implementation deps.retrofit.gson
+    implementation deps.okhttp.okhttp
+    implementation deps.okhttp.interceptor
+
+    // Dagger
+    implementation deps.dagger.dagger
+    implementation deps.dagger.androidx_support
+    kapt deps.dagger.compiler
+    kapt deps.dagger.annotationProcessor
+
+    // test
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.androidx_test
+    androidTestImplementation deps.test.expresso
+}
