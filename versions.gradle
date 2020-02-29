@@ -94,8 +94,7 @@ test.expresso = "androidx.test.espresso:espresso-core:$versions.expresso"
 deps.test = test
 
 
-
-def addRepos(RepositoryHandler handler) {
+static def addRepos(RepositoryHandler handler) {
     handler.google()
     handler.jcenter()
     handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }

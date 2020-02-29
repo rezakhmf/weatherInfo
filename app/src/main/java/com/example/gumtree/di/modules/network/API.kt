@@ -5,9 +5,6 @@ object API {
     const val BASE_URL: String = "https://api.openweathermap.org/"
     const val PATH: String = "/data/2.5/weather"
     const val timeout: Long = 3000
-//    var byCityID: String = "api?q=city$key"
-//    var byLatLong: String = "api?lat=35&lon=139$key"
-//    var byZipCode: String = "api?zip=zipcode,countrycode$key"
 }
 
 object WeatherIcons {

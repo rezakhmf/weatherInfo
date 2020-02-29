@@ -8,7 +8,11 @@ class WeatherPresenter @Inject constructor(private val weatherRepository: Weathe
     BaseWeatherPresenter {
 
 
-    override suspend fun getWeatherBy(cityName: String): WeatherModel? {
-        return weatherRepository.getWeatherByCity(cityName = cityName)
+    override suspend fun getWeatherByCity(name: String): WeatherModel? {
+        return weatherRepository.getWeatherByCity(name = name)
+    }
+
+    override suspend fun getWeatherByCityLatLon(lat: String, lon: String): WeatherModel? {
+        return weatherRepository.getWeatherByCityLatLon(lat = lat, lon = lon)
     }
 }

@@ -1,8 +1,6 @@
 package com.example.gumtree.di.modules.network
 
 import android.content.Context
-import com.example.gumtree.di.modules.network.API
-import com.example.gumtree.di.modules.network.ApiInterceptor
 import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module

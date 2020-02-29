@@ -1,6 +1,5 @@
 package com.example.gumtree.di.modules.weather
 
-import com.example.gumtree.model.weather.repository.BaseWeatherRepository
 import com.example.gumtree.model.weather.repository.WeatherRepository
 import com.example.gumtree.presenter.weatherInfo.BaseWeatherPresenter
 import com.example.gumtree.presenter.weatherInfo.WeatherPresenter
