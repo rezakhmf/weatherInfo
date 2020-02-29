@@ -29,7 +29,9 @@ Android is your passion
 * [Retrofit2](http://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
 * [ConstraintLayout](https://developer.android.com/training/constraint-layout/index.html) - A Responsive UI layout manager
 * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way.
-* [LifeCycle](https://developer.android.com/topic/libraries/architecture/lifecycle) -  provides classes and interfaces that let you build lifecycle-aware components
+* [LifeCycle](https://developer.android.com/topic/libraries/architecture/lifecycle) -  provides classes and interfaces that let you build lifecycle-aware 
+components
+* [DataBining](https://developer.android.com/topic/libraries/data-binding) -  The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
 
 
 ![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bycityname.png)
