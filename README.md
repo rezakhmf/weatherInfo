@@ -21,8 +21,8 @@ This project is done in Kotlin With Archietcture Component
 Kotlin
 
 
-![Main Screen](https://github.com/rezakhmf/commonwealthbank-test/blob/master/bycityname.png)
-![Main Screen](https://github.com/rezakhmf/commonwealthbank-test/blob/master/bygps.png)
+![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bycityname.png)
+![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bygps.png)
 
 
 

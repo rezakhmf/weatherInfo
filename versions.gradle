@@ -29,6 +29,7 @@ versions.logging_interceptor = "4.3.1"
 versions.junit = "4.12"
 versions.androidx_test = "1.1.1"
 versions.expresso = "3.2.0"
+versions.mockito = "2.2.0"
 
 def langs = [:]
 langs.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
@@ -90,6 +91,7 @@ def test = [:]
 test.junit = "junit:junit:$versions.junit"
 test.androidx_test = "androidx.test.ext:junit:$versions.androidx_test"
 test.expresso = "androidx.test.espresso:espresso-core:$versions.expresso"
+test.mockito = "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito"
 
 deps.test = test
 

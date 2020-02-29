@@ -75,6 +75,8 @@ dependencies {
 
     // test
     testImplementation deps.test.junit
+    testImplementation deps.test.mockito
     androidTestImplementation deps.test.androidx_test
     androidTestImplementation deps.test.expresso
+
 }
