@@ -18,18 +18,7 @@ This project is done in Kotlin With Archietcture Component
 
 ### Prerequisites
 
-Kotlin
-
-
-![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bycityname.png)
-![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bygps.png)
-
-
-
-
-### Installing
-
-It just needs to import to Android Studio 3(Gradle 4) as a Kotlin project
+Android is your passion
 
 ## Built With
 
@@ -41,6 +30,17 @@ It just needs to import to Android Studio 3(Gradle 4) as a Kotlin project
 * [ConstraintLayout](https://developer.android.com/training/constraint-layout/index.html) - A Responsive UI layout manager
 * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - The ViewModel class is designed to store and manage UI-related data in a lifecycle conscious way.
 * [LifeCycle](https://developer.android.com/topic/libraries/architecture/lifecycle) -  provides classes and interfaces that let you build lifecycle-aware components
+
+
+![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bycityname.png)
+![Main Screen](https://github.com/rezakhmf/weatherInfo/blob/master/screenshots/bygps.png)
+
+
+
+
+### Installing
+
+It just needs to import to Android Studio 3(Gradle 4) as a Kotlin project
 
 ## Contributing
 
